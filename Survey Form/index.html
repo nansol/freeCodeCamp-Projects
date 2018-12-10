@@ -1,51 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="/style.css">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Cormorant+Infant:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Survey Form</title>
 </head>
 <body>
-        Result
-        EDIT ON
-         <form action="get">
-          <fieldset>
-            <legend>Your skillset</legend>
-            
-            <div>
-              <input id="name" name="name" type="text" />
-              <label for="name">name</label>
-            </div>
-            
-            <div>
-              <select id="experience" name="experience">
-                <option value="1">1 year or less</option>
-                <option value="2">2 years</option>
-                <option value="3">3 - 4 years</option>
-                <option value="5">5 years or more</option>
-              </select>
-              <label for="experience">experience</label>
-            </div>
-            
-            <div>
-              <input id="html" name="html" type="checkbox" />
-              <label for="html">HTML</label>
-            </div>
-            
-            <div>
-              <input id="css" name="css" type="checkbox" />
-              <label for="css">CSS</label>
-            </div>
-            
-            <div>
-              <input id="javascript" name="javascript" type="checkbox" />
-              <label for="javascript">JavaScript</label>
-            </div>
-            
-          </fieldset>
-        </form>
-        
+  <header>
+      <h1 id="title">Survey Form</h1>
+  </header>
+  <div class="entry">
+    
+    <p id="description">How do you spend Christmas?</p>
+
+  <form action="" id="survey-form">
+    <div class="container">
+        <div class="labels">
+          <label for="name" id="name-label">*Name</label>
+        </div>
+        <div class="inputs">
+          <input type="text" id="name" placeholder="Enter your name" required >
+        </div>               
+    </div>
+
+    <div class="container">
+      <div class="labels">
+        <label for="email" id="email-label">*Email</label>
+      </div>  
+      <div class="inputs">
+        <input type="email" id="email" placeholder="Enter your email" required >
+      </div>
+    </div>
+
+    <div class="container">
+        <div class="labels">
+        <label for="age" id="number-label">*Age</label>
+        </div>
+        <div class="inputs">
+        <input type="number" id="number" placeholder="Enter your date of birth" required >
+      </div>  
+    </div>
+
+    <div class="container">
+        <div class="labels">
+        <label for="currentrole" id="dropdown-label">Which option best describes your current role?</label>
+        </div>
+        <div class="inputs">
+        <select name="currentrole" id="dropdown">
+            <option value>Select an option</option>
+            <option value="student">Student</option>
+            <option value="job">Full Time Job</option>
+            <option value="freelance">Freelance</option>
+            <option value="other">Other</option>
+        </select>   
+      </div>   
+    </div>
+
+    <div class="container">
+      <div class="labels">
+          <label for="celebration" id="celebration-label" class="labels">*Do you celebrate Christmas?</label>
+      </div>
+      <div class="radioInput">
+          <input type="radio" name="celebration" value="yes">Yes
+          <input type="radio" name="celebration" value="no">No
+          <input type="radio" name="celebration" value="maybe">Maybe
+      </div>
+    </div>
+    <div class="container">
+      <div class="labels">
+        <label for="enjoy" id="dropdow-label" class="labels">Where do you intend to celebrate the majority of Christmas day?</label>
+      </div>
+      <div class="inputs">
+          <select name="currentrole" id="dropdown">
+              <option value>Select an option</option>
+              <option value="athome">At home</option>
+              <option value="visiting">At a family member’s house</option>
+              <option value="visitingfriend">At a friend’s house</option>
+              <option value="travel">On holiday internationally</option>
+              <option value="restaurant">At a restaurant or similar</option>
+              <option value="other">Other</option>
+          </select>  
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="labels">
+          <label for="traditions" id="traditions-label" class="labels">What Christmas traditions do you follow? (Check all that apply)</label>
+      </div>
+      <div class="checkboxInput">
+          <input type="checkbox" name="traditions" id="traditions" value="calendar">Count down with an advent calendar <br>
+          <input type="checkbox" name="traditions" id="traditions" value="cookie">Plan a cookie exchange <br>
+          <input type="checkbox" name="traditions" id="traditions" value="singig">Sing Christmas Carols <br>
+          <input type="checkbox" name="traditions" id="traditions" value="wreth">Advent wreath on the table <br>
+          <input type="checkbox" name="traditions" id="traditions" value="church">Visit the church <br>
+      </div>
+    </div>
+    <div class="container">
+      <div class="labels">
+          <label for="comments" class="labels" >What is your the most favorite Christmas experience?</label>
+      </div>
+      <div class="texareainput">
+          <textarea name="comments" id="comments" cols="30" rows="10"></textarea>
+    </div>   
+    </div>
+    <div class="btn">
+      <button id="submit" type="submit" >Submit</button>   
+    </div>
+  </form>
+</div>
 </body>
 </html>
